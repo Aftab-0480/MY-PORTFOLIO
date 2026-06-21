@@ -6,6 +6,7 @@ import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
 import MMPng from '../assets/MM.png';
 import VOTINGpng from "../assets/voting.png";
 import weatherWisepng from "../assets/weatherWise.png";
+import JSONpng from "../assets/json.png"
 
 // Cleaned up text colors to let our global stone styling handle standard hover transitions flawlessly
 export const socialLinks = [
@@ -112,5 +113,15 @@ export const projectsData = [
     github: 'https://github.com/Aftab-0480/voting_app',
     live: 'https://voting-app-nine-mocha.vercel.app',
     featured: false
+  },
+  {
+    id: 4,
+    title: 'JSON Formatter & Validator',
+    description: 'A professional-grade developer utility tool that provides instant JSON beautification, minification, and real-time syntax validation with an error-highlighting interface to streamline API debugging and data management.',
+    tags: ['React', 'Tailwind CSS', 'Vite', 'JavaScript', 'Web APIs', 'UI/UX Design', 'Git'],
+    image: JSONpng,
+    github: 'https://github.com/Aftab-0480/json-formatter',
+    live: 'https://json-formatter-zeta-sable.vercel.app/',
+    featured: true
   }
 ];
