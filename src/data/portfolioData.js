@@ -79,16 +79,6 @@ export const skillsData = [
       { name: 'Postman' },
       { name: 'VS Code' }
     ]
-  },
-  {
-    category: 'Currently Learning',
-    icon: FaCode,
-    skills: [
-      { name: 'Docker' },
-      { name: 'Linux' },
-      { name: 'Redis' },
-      { name: 'System Design' }
-    ]
   }
 ];
 
