@@ -15,10 +15,10 @@ export default function Navbar() {
 
   const scrollTo = (id) => {
     setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -26,7 +26,6 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <span onClick={() => scrollTo('home')} className="text-2xl font-serif font-bold text-white cursor-pointer hover:text-emerald-400 transition-colors">Aftab Alam</span>
         
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <button key={item} onClick={() => scrollTo(item)} className="capitalize text-sm font-semibold text-stone-400 hover:text-emerald-400 transition-colors">
@@ -35,21 +34,14 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Toggle */}
         <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }} 
-            animate={{ opacity: 1, height: 'auto' }} 
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#1a1d20] border-b border-white/5 overflow-hidden"
-          >
+          <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} className="md:hidden bg-[#1a1d20] border-b border-white/5 overflow-hidden">
             <div className="px-6 py-8 flex flex-col space-y-6">
               {navItems.map((item) => (
                 <button key={item} onClick={() => scrollTo(item)} className="capitalize text-lg font-semibold text-stone-300 hover:text-emerald-400 block w-full text-left">
