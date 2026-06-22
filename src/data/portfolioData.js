@@ -31,7 +31,7 @@ export const educationData = [
     title: 'Senior Secondary Education (Class XII)',
     institution: 'Senior Secondary School (Boys), AMU',
     subtitle: 'Aligarh, Uttar Pradesh | Science Stream',
-    details: ['PCM Stream Focus', 'Foundation-level Computer Science principles']
+    details: ['PCM Stream']
   },
   {
     year: '2021',
